@@ -1,0 +1,45 @@
+server:
+  port: ${SERVER_PORT:8083}
+
+spring:
+  application:
+    name: ${SERVICE_NAME:cart-service}
+  
+  data:
+    redis:
+      host: ${SPRING_REDIS_HOST:localhost}
+      port: ${SPRING_REDIS_PORT:6379}
+      timeout: ${REDIS_TIMEOUT:60000}
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+
+jwt:
+  secret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970}
+  expiration: ${JWT_EXPIRATION:86400000}
+
+# Product Service URL for inter-service communication
+product-service:
+  url: ${PRODUCT_SERVICE_URL:http://localhost:8082}/api/products
+
+# Cart Configuration - ADD ALL MISSING PROPERTIES
+cart:
+  ttl: ${CART_TTL:86400}
+  max-items: ${CART_MAX_ITEMS:50}
+
+logging:
+  level:
+    com.ecommerce: ${LOGGING_LEVEL_COM_ECOMMERCE:INFO}
+    org.springframework.security: INFO
+    org.springframework.data.redis: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: when-authorized
