@@ -286,8 +286,8 @@ This project is open-source and available for learning purposes.
 ## 👤 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- GitHub: [@yourusername](https://github.com/bittu9975)
+- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/durgeshdhurve/)
 
 ## 🙏 Acknowledgments
 
